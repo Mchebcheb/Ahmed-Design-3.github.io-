@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmed Design | New New Page</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="contenedor top-bar-inner">
+            <div class="top-logo">
+                <img src="logo obra.png" alt="Logo" style="height: 50px;">
+            </div>
+            <div class="top-info">
+                <div class="info-item">
+                    <a href="tel:+212614738881">📱 +212 614 738 881</a>
+                </div>
+                <div class="info-item">
+                    <a href="https://maps.google.com" target="_blank">📍 Ksar el Kebir y alrededores</a>
+                </div>
+                <div class="info-item">
+                    <a href="mailto:mchebcheb2019@gmail.com">📧 mchebcheb2019@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <div class="logo">
+                <h1>Construcción <span>Ahmed</span></h1>
+            </div>
+
+            <div class="menu-movil-icono" onclick="toggleMenu()">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html" class="link active">index</a></li>
+
+                    <li class="tiene-submenu">
+                        <a href="#">Servicios <i class='bx bx-chevron-down'></i></a>
+                        <ul class="submenu">
+                            <li><a href="index.html#seccion-Servicios">Servicios</a></li>
+                            <li><a href="index.html#seccion-albanileria">Albañilería</a></li>
+                            <li><a href="index.html#seccion-reformas">Reformas</a></li>
+                            <li><a href="index.html#seccion-encofrados">Encofrados</a></li>
+                            <li><a href="index.html#seccion-tejas">Tejas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="tiene-submenu">
+                        <a href="#">Páginas <i class='bx bx-chevron-down'></i></a>
+                        <ul class="submenu">
+                            <li><a href="index.html#seccion-sobre-nosotros">Sobre Nosotros</a></li>
+                            <li><a href="index.html#seccion-destacada">Destacado</a></li>
+                            <li><a href="index.html#seccion-proyectos">Proyectos</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="index.html#seccion-blog">Blog</a></li>
+                    <li><a href="index.html#seccion-contactanos">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="inicio-index"></div>
+
+    <section id="hero-mockup" class="hero-section">
+        <div class="contenedor hero-inner">
+            <div class="hero-texto">
+                <h1>Hormigón y Pavimento en Ksar el Kebir</h1>
+                <p>
+                    Durante más de una década hemos pavimentado patios, accesos, garajes y perímetros de piscina.
+                    Combinamos estética y ejecución rápida. Si buscas un suelo resistente y fácil de mantener, te
+                    acompañamos de principio a fin.
+                </p>
+                <a href="index.html#seccion-contactanos" class="btn-estilo-web btn-hero">
+                    Solicitar Presupuesto
+                </a>
+                <a href="index.html#seccion-proyectos" class="btn-estilo-web">Ver Proyectos</a>
+            </div>
+
+            <div class="hero-imagen">
+                <img src="mockup.png" alt="Suelo de hormigón">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="seccion-Servicios" class="nuestros-Servicios">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Nuestros Servicios</h2>
+            <div class="grid-servicios">
+                <div class="servicio-card"><img src="hormigon.jpg" alt="Hormigón impreso">
+                    <div class="contenido-servicio">
+                        <h3>Hormigón impreso para exteriores</h3>
+                        <p>Patios, accesos, garajes, aceras y perímetros de piscina con textura y color a elegir.
+                        </p>
+                    </div>
+                </div>
+                <div class="servicio-card"><img src="pavimentos.jpg" alt="Pavimentos decorativos">
+                    <div class="contenido-servicio">
+                        <h3>Pavimentos decorativos y reparaciones</h3>
+                        <p>Reparación de fisuras, resellado y renovación de color para devolver el brillo.</p>
+                    </div>
+                </div>
+                <div class="servicio-card"><img src="reformas.jpg" alt="Reformas y obra civil">
+                    <div class="contenido-servicio">
+                        <h3>Reformas y obra civil ligera</h3>
+                        <p>Actuaciones en portales, rampas, accesibilidad, aceras y zonas comunes.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html#seccion-contactanos" class="btn-estilo-web">Solicitar Información</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion-albanileria" class="detalle-servicio seccion-gris">
+        <div class="contenedor grid-detalle">
+            <div class="imagen-servicio"><img src="albanileria-detalle.jpg" alt="Albañilería"></div>
+            <div style="flex: 1 !important; width: 60% !important;">
+                <h2>Albañilería Profesional</h2>
+                <p>Realizamos todo tipo de trabajos de albañilería, desde pequeñas reformas hasta obras completas.
+                </p>
+                <ul class="lista-caracteristicas">
+                    <li><i class="fas fa-check-circle"></i> Construcción de muros y tabiquería.</li>
+                    <li><i class="fas fa-check-circle"></i> Revocos y alisado de paredes.</li>
+                    <li><i class="fas fa-check-circle"></i> Reparación de estructuras dañadas.</li>
+                </ul>
+                <a href="presupuesto.html" class="btn-estilo-web">Pedir Presupuesto</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion-reformas" class="nuestros-servicios">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Reformas Integrales</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #666;">Transformamos espacios antiguos en
+                hogares
+                modernos y funcionales.</p>
+            <div class="grid-servicios">
+                <div class="servicio-card"><img src="reforma-interior.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Interiores Modernos</h3>
+                        <p>Cocinas y baños a medida con materiales de primera calidad.</p>
+                    </div>
+                </div>
+                <div class="servicio-card"><img src="reforma-integral.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Reformas Integrales</h3>
+                        <p>Planificación completa para cambiar la distribución.</p>
+                    </div>
+                </div>
+                <div class="servicio-card"><img src="reforma-detalles.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Acabados de Precisión</h3>
+                        <p>Pintura, suelos y remates finales impecables.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html#seccion-contactanos" class="btn-estilo-web">Solicitar Información</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion-encofrados" class="nuestros-servicios seccion-gris">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Encofrados y Estructuras</h2>
+            <div class="grid-servicios">
+                <div class="servicio-card"><img src="muros-hormigon.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Muros de Contención</h3>
+                        <p>Estructuras sólidas diseñadas para grandes cargas.</p>
+                    </div>
+                </div>
+                <div class="servicio-card"><img src="forjados.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Forjados</h3>
+                        <p>Ejecución precisa de estructuras horizontales.</p>
+                    </div>
+                </div>
+                <div class="servicio-card"><img src="cimentaciones.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Cimentaciones</h3>
+                        <p>La base perfecta para cualquier proyecto.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html#seccion-contactanos" class="btn-estilo-web">Solicitar Información</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion-tejas" class="nuestros-servicios">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Cubiertas y Tejas</h2>
+            <div class="grid-servicios">
+                <div class="servicio-card"><img src="teja-ceramica.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Teja Cerámica</h3>
+                        <p>Opción tradicional de máxima durabilidad.</p>
+                    </div>
+                </div>
+                <div class="servicio-card"><img src="teja-hormigon.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Teja de Hormigón</h3>
+                        <p>Resistencia superior frente a inclemencias.</p>
+                    </div>
+                </div>
+                <div class="servicio-card"><img src="reparacion-tejados.jpg">
+                    <div class="contenido-servicio">
+                        <h3>Mantenimiento</h3>
+                        <p>Detección de filtraciones y reparaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html#seccion-contactanos" class="btn-estilo-web">Solicitar Información</a>
+            </div>
+        </div>
+    </section>
+    <section id="seccion-sobre-nosotros" class="seccion-gris">
+        <div class="contenedor contenido-nosotros">
+
+            <div class="columna-izquierda">
+                <p class="subtitulo">Sobre Nosotros</p>
+                <h2>Equipo profesional en pavimentos y reformas</h2>
+                <img src="tu-imagen-de-suelo.jpg" alt="Suelo de hormigón impreso">
+            </div>
+
+            <div class="columna-derecha">
+                <div class="caja-experiencia">
+                    <h3>+10</h3>
+                    <p>Años de experiencia</p>
+                </div>
+
+                <p class="frase-destacada">
+                    "Trabajamos rápido y limpio para que disfrutes de un suelo bonito, resistente y fácil de mantener."
+                </p>
+
+                <p>
+                    Aplicamos materiales certificados, sellado adecuado y una ejecución cuidada para que el color y la
+                    textura se mantengan como el primer día. Visitamos tu espacio, recomendamos moldes y tonalidades y
+                    entregamos en plazo con garantías.
+                </p>
+
+                <ul class="lista-ventajas">
+                    <li>✅ Operarios profesionales</li>
+                    <li>✅ Materiales Duraderos</li>
+                    <li>✅ Herramientas avanzadas</li>
+                    <li>✅ Puntualidad en plazos</li>
+                    <li>✅ Empresa de confianza</li>
+                    <li>✅ Recomendaciones de cuidado</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="seccion-destacada" class="seccion-destacada-fondo">
+        <div class="contenedor grid-destacado">
+
+            <div class="contenido-texto-blanco">
+                <h1>Hormigón y Pavimento en Ksar El el-Kebir</h1>
+
+                <p>Durante más de una década hemos pavimentado patios, accesos, garajes y perímetros de piscina en
+                    toda
+                    Sevilla, combinando la estética de los moldes decorativos con una ejecución rápida y limpia.
+                    Trabajamos con visita técnica, asesoría de color y textura, y sellado final para un acabado
+                    antideslizante e impermeable que se mantiene fácil en el tiempo.</p>
+
+                <p>Cuidamos cada fase: preparación de la base, vertido y texturizado, juntas y drenaje, y un plan de
+                    mantenimiento sencillo para conservar el brillo y el tono original. Si buscas un suelo que
+                    resista
+                    el uso diario y realce tu vivienda o comunidad, te acompañamos de principio a fin.</p>
+
+                <p class="contacto-directo">¿Hablamos de tu proyecto? Contáctanos por WhatsApp al +212614738881 o en
+                    mchebcheb2019@gmail.com</p>
+
+                <a href="index.html#seccion-contactanos" class="btn-amarillo">Contáctanos</a>
+            </div>
+
+            <div class="imagen-destacada-derecha">
+                <img src="tu-imagen-de-pavimento-destacado.jpg" alt="Detalle de pavimento de adoquines">
+            </div>
+
+        </div>
+    </section>
+    <section id="seccion-proyectos" class="seccion-proyectos-fondo">
+        <div class="contenedor" style="text-align: center;">
+            <h2 style="color: white; font-size: 3.5rem; margin: 20px 0;">Nuestros Proyectos</h2>
+
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <a href="index.html#seccion-contactanos" class="btn-amarillo">Solicitar Información</a>
+        </div>
+
+
+    </section>
+
+    <section id="seccion-proyectos" class="trabajos-recientes">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Trabajos Recientes</h2>
+
+            <div class="grid-galeria">
+                <div class="proyecto-item">
+                    <img src="proyecto1.jpg" alt="Proyecto 1">
+                </div>
+                <div class="proyecto-item">
+                    <img src="proyecto2.jpg" alt="Proyecto 2">
+                </div>
+                <div class="proyecto-item">
+                    <img src="proyecto3.jpg" alt="Proyecto 3">
+                </div>
+                <div class="proyecto-item">
+                    <img src="proyecto4.jpg" alt="Proyecto 4">
+                </div>
+                <div class="proyecto-item">
+                    <img src="proyecto5.jpg" alt="Proyecto 5">
+                </div>
+                <div class="proyecto-item">
+                    <img src="proyecto6.jpg" alt="Proyecto 6">
+                </div>
+                <div class="proyecto-item">
+                    <img src="proyecto7.jpg" alt="Proyecto 7">
+                </div>
+                <div class="proyecto-item">
+                    <img src="proyecto8.jpg" alt="Proyecto 8">
+                </div>
+                <div class="proyecto-item">
+                    <img src="proyecto9.jpg" alt="Proyecto 9">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="seccion-blog" class="seccion-gris">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Nuestro Blog</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #666;">Consejos, tendencias y noticias sobre
+                el
+                mundo de la construcción.</p>
+
+            <div class="grid-blog">
+                <div class="blog-card">
+                    <img src="blog1.jpg" alt="Título artículo 1">
+                    <div class="blog-contenido">
+                        <h3>Cómo mantener tu suelo de hormigón</h3>
+                        <p>Guía rápida para conservar el brillo y la resistencia de tus pavimentos...</p>
+                        <a href="#" class="btn-leer-mas">Leer más</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="blog2.jpg" alt="Título artículo 2">
+                    <div class="blog-contenido">
+                        <h3>Tendencias en reformas para 2026</h3>
+                        <p>Descubre qué materiales y estilos están marcando tendencia este año...</p>
+                        <a href="#" class="btn-leer-mas">Leer más</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="blog3.jpg" alt="Título artículo 3">
+                    <div class="blog-contenido">
+                        <h3>Importancia de un buen drenaje</h3>
+                        <p>Por qué el encofrado correcto es vital para evitar problemas de humedad...</p>
+                        <a href="#" class="btn-leer-mas">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="seccion-contactanos" class="contacto-seccion">
+
+        <div class="banner-contacto seccion-proyectos-fondo">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Contáctanos</h2>
+
+            </div>
+        </div>
+
+        <div class="contenedor formulario-contacto">
+            <div class="contacto-contenedor">
+                <p class="contacto-texto">Te asesoramos gratis y sin compromiso.</p>
+                <form action="https://formspree.io/f/xnjlzeap" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-estilo-web">Enviar Mensaje</button>
+
+
+            </div>
+            </form>
+        </div>
+        </div>
+    </section>
+    <section id="seccion-mapa" class="mapa-full">
+        <div class="mapa-wrapper">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26168.328325983796!2d-5.926524333649646!3d35.002880789723046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0bc3021f1e0001%3A0x6b866c1b4b0e5c9b!2sKsar%20el-Kebir%2C%20Marruecos!5e0!3m2!1ses!2ses!4v1680000000000!5m2!1ses!2ses"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+    <footer class="footer-seccion">
+        <div class="contenedor footer-grid">
+
+            <div class="footer-col">
+                <h3>Empresa —</h3>
+                <ul>
+                    <li><a href="#inicio-index">Inicio</a></li>
+                    <li><a href="#seccion-sobre-nosotros">Acerca de</a></li>
+                    <li><a href="#seccion-Servicios">Servicios</a></li>
+                    <li><a href="#seccion-destacada">Destacado</a></li>
+                    <li><a href="#seccion-proyectos">Proyectos</a></li>
+                    <li><a href="#seccion-contactanos">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contacto —</h3>
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Calle+Principal,Ksar+el-Kebir"
+                        target="_blank" style="text-decoration: none; color: #ccc;">
+                        <i class='bx bx-map'></i> Calle Principal, Ksar el-Kebir
+                    </a>
+                </p>
+
+                <p><a href="tel:+212614738881"><i class='bx bx-phone'></i> +212614738881</a></p>
+
+                <p><a href="mailto:mchebcheb2019@gmail.com"><i class='bx bx-envelope'></i>
+                        mchebcheb2019@gmail.com</a></p>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Ahmed.Chahmout.1088893" target="_blank">
+                        <i class="socialmedia__icon bx bxl-facebook-circle"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mchebcheb2019/" target="_blank">
+                        <i class="socialmedia__icon bx bxl-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/212614738881?text=Hola%20Ahmed,%20vengo%20de%20tu%20web" target="_blank">
+                        <i class="socialmedia__icon bx bxl-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ahmed-chahmout-1a87723b5" target="_blank">
+                        <i class="socialmedia__icon bx bxl-linkedin-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Horario —</h3>
+                <p><strong>Lunes - Sábado:</strong><br> 09 AM - 11 PM</p>
+                <p><strong>Domingo:</strong><br> 10 AM - 10 PM</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Boletín</h3>
+                <p>Suscríbete para recibir ofertas y nuevos platos neón.</p>
+
+                <form action="https://formspree.io/f/xnjlzeap" method="POST" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">UNIRSE</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="contenedor">
+                <p>&copy; 2026 Albañilería Ahmed. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="Privacidad.html">Privacidad</a>
+                    <a href="Cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

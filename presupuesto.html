@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir Presupuesto | Ahmed Design</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {
+            background-color: #0d0d0d !important;
+            color: #cccccc !important;
+            font-family: 'Segoe UI', Roboto, sans-serif !important;
+            margin: 0 !important;
+            padding: 50px 20px !important;
+        }
+
+        .presupuesto-container {
+            max-width: 600px !important;
+            margin: 0 auto !important;
+            background-color: #141414 !important;
+            padding: 30px !important;
+            border-radius: 10px !important;
+            border: 1px solid #00bcd4 !important;
+            box-shadow: 0 10px 25px rgba(0, 188, 212, 0.15) !important;
+        }
+
+        .presupuesto-container h2 {
+            color: #00bcd4 !important;
+            margin-bottom: 20px !important;
+        }
+
+        .form-group {
+            margin-bottom: 15px !important;
+        }
+
+        .form-group label {
+            display: block !important;
+            margin-bottom: 5px !important;
+            color: #ffffff !important;
+        }
+
+        .form-control {
+            width: 100% !important;
+            padding: 10px !important;
+            border: 1px solid #333 !important;
+            border-radius: 5px !important;
+            background-color: #1f1f1f !important;
+            color: #ffffff !important;
+            box-sizing: border-box !important;
+        }
+
+        .form-control:focus {
+            outline: none !important;
+            border-color: #00bcd4 !important;
+        }
+
+        .btn-enviar {
+            background-color: #00bcd4 !important;
+            color: #0d0d0d !important;
+            border: none !important;
+            padding: 12px 20px !important;
+            border-radius: 5px !important;
+            cursor: pointer !important;
+            font-weight: bold !important;
+            transition: background 0.3s ease !important;
+        }
+
+        .btn-enviar:hover {
+            background-color: #008ba3 !important;
+            color: #ffffff !important;
+        }
+
+        .btn-volver {
+            background-color: transparent !important;
+            color: #00bcd4 !important;
+            border: 1px solid #00bcd4 !important;
+            padding: 11px 20px !important;
+            border-radius: 5px !important;
+            cursor: pointer !important;
+            font-weight: bold !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            margin-left: 10px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .btn-volver:hover {
+            background-color: #00bcd4 !important;
+            color: #0d0d0d !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="presupuesto-container">
+        <h2>Solicitud de Presupuesto</h2>
+
+        <form action="https://formspree.io/f/xnjlzeap" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Descripción de la obra:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" class="form-control" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Solicitud</button>
+            <a href="index.html" class="btn-volver">Volver al Inicio</a>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1115 @@
+/* 1. Reset Global y Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --naranja: #ff6600;
+    --negro: #1a1a1a;
+    --gris: #f4f4f4;
+    /* CAMBIA ESTO: Un tono arena/gris muy suave en lugar de blanco puro */
+    --blanco: #fdfdfd;
+    /* Fondo general de la página */
+    --fondo-pagina: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    /* Aquí aplicamos el color de fondo */
+    background-color: var(--fondo-pagina);
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cabecera {
+    background: rgb(201, 171, 240) !important;
+    /* El !important fuerza el color */
+    padding: 20px 0;
+    border-bottom: 4px solid var(--naranja);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1000;
+}
+
+.cabecera .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* El Logo: Le damos peso visual */
+.logo h1 {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--negro);
+    letter-spacing: -1px;
+}
+
+.logo h1 span {
+    color: var(--naranja);
+}
+
+/* Menú: Espaciado y elegancia */
+.menu-principal>ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    /* Más aire entre enlaces */
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu-principal a:hover {
+    color: #f8f7e1;
+}
+
+/* Ajuste del icono de flecha del menú */
+.menu-principal a i {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.menu-principal>ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+}
+
+/* Submenú profesional */
+.tiene-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--blanco);
+    width: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.tiene-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    padding: 8px 20px;
+    font-weight: 400;
+}
+
+.submenu a:hover {
+    color: var(--naranja);
+    background: #f9f9f9;
+}
+
+/* 3. Hero Section (Diseño Grid profesional) */
+.hero-construccion {
+    padding: 80px 0;
+    background: var(--gris);
+}
+
+.grid-hero {
+    display: grid !important;
+    /* 0.8fr para el texto, 1.2fr para el mockup */
+    grid-template-columns: 0.8fr 1.2fr !important;
+    gap: 40px !important;
+    /* Reducimos un poco el gap para ganar espacio */
+    align-items: center !important;
+}
+
+.hero-texto h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--negro);
+}
+
+.hero-texto p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* 4. Botones */
+.hero-botones {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-principal {
+    background: var(--naranja);
+    color: rgb(119, 108, 108);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-secundario {
+    border: 2px solid var(--negro);
+    color: var(--negro);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* 5. Imagen Mockup */
+.imagen-mockup {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-proyectos {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor-proyectos h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-proyecto {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #98e1f7;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    /* Aquí está la clave de la suavidad */
+}
+
+/* EFECTO HOVER */
+.tarjeta-proyecto:hover {
+    transform: translateY(-10px);
+    /* Eleva la tarjeta */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    /* Sombra más oscura */
+}
+
+.tarjeta-proyecto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.info-proyecto {
+    padding: 20px;
+}
+
+.info-proyecto h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-proyecto p {
+    color: #666;
+}
+
+/* Estilo base del botón */
+.btn-inicio {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #f8e1e1;
+    /* Fondo transparente inicialmente */
+    color: blue;
+    /* Texto naranja */
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--naranja);
+    /* Borde naranja del mismo tono */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Hace que el cambio sea suave */
+}
+
+/* Efecto al poner el ratón encima */
+.btn-inicio:hover {
+    background-color: var(--naranja);
+    /* El fondo se vuelve naranja */
+    color: white;
+    /* El texto se vuelve blanco para contrastar */
+    transform: scale(1.05);
+    /* Un pequeño zoom elegante */
+    cursor: pointer;
+}
+
+.btn-estilo-web {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgb(201, 171, 240);
+    /* Fondo transparente */
+    color: var(--naranja);
+    /* Texto naranja */
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--naranja);
+    /* Borde naranja */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Animación suave */
+    margin: 10px;
+    /* Separación si están juntos */
+}
+
+/* Efecto al pasar el ratón */
+.btn-estilo-web:hover {
+    background-color: var(--naranja);
+    /* Fondo se rellena */
+    color: white;
+    /* Texto cambia a blanco */
+    transform: scale(1.05);
+    /* Ligero zoom */
+    cursor: pointer;
+}
+
+.imagen-mockup {
+    border-radius: 15px;
+    /* Ajusta este número según cuánto redondeo quieras */
+    display: block;
+    /* Elimina espacios extra debajo de la imagen */
+    width: 100%;
+    /* Asegura que se adapte al contenedor */
+}
+
+.hero-mockup {
+    /* El borde con el color de tu cabecera */
+    border: 4px solid #84b7eb;
+    /* El mismo redondeo que quieras usar en todo el sitio */
+    border-radius: 15px;
+    /* Importante: esto asegura que la imagen no se "coma" el borde */
+    overflow: hidden;
+    /* Para que el contenedor se ajuste al tamaño de la imagen */
+    display: inline-block;
+}
+
+.imagen-mockup {
+    /* Para que la imagen encaje bien dentro del contenedor con borde */
+    display: block;
+    width: 100%;
+}
+
+/* Estilo base para todos los links */
+.link {
+    text-decoration: none;
+    color: #333;
+    /* Un gris oscuro para que sea legible */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* El estilo específico para cuando el enlace está activo */
+.link.active {
+    color: var(--naranja);
+    position: relative;
+    font-weight: 900;
+    /* Máxima intensidad de negrita */
+}
+
+/* El toque profesional: una línea debajo cuando está activo */
+.link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    /* Aumenté el grosor de la línea a 3px para que acompañe a la negrita */
+    background-color: var(--naranja);
+    border-radius: 2px;
+}
+
+/* Contenedor principal de la barra */
+.top-bar {
+    background-color: #f8f9fa;
+    /* Color de fondo suave */
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Alineación interna (Flexbox) */
+.top-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    /* Logo a un lado, info al otro */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Para que se ajuste si es estrecho */
+    gap: 15px;
+}
+
+/* Info de contacto */
+.top-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Estilo para los enlaces de contacto */
+.info-item a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.info-item a:hover {
+    color: #ff6600;
+    /* Color naranja al pasar el mouse */
+}
+
+.nuestros-servicios {
+    padding: 60px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.servicio-card {
+    background-color: #f4f1ea;
+    /* Color de fondo de tus cajas */
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* Ajusta la imagen sin deformarla */
+}
+
+.contenido-servicio {
+    padding: 20px;
+    text-align: center;
+}
+
+.contenido-servicio h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Efecto hover */
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+.detalle-servicio {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.grid-detalle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas iguales */
+    gap: 40px;
+    align-items: center;
+}
+
+.imagen-servicio img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Esto hace que el cambio sea suave (duración 0.3 segundos) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Este es el efecto que ocurre al poner el ratón encima */
+.imagen-servicio img:hover {
+    transform: scale(1.05);
+    /* Aumenta el tamaño un 5% */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    /* Sombra más pronunciada al elevarse */
+    cursor: pointer;
+}
+
+.lista-caracteristicas {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.lista-caracteristicas li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.lista-caracteristicas i {
+    color: #ffcc00;
+    /* El color de tu marca */
+    margin-right: 10px;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .grid-detalle {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móvil */
+    }
+}
+
+.seccion-gris {
+    background-color: var(--gris);
+    /* Usamos el gris suave definido en tu :root */
+    padding: 80px 0;
+    /* Padding superior e inferior para que el contenido respire */
+}
+
+/* --- Estilos para la Sección Destacada con Fondo --- */
+
+.seccion-destacada-fondo {
+    /* IMPORTANTE: Cambia 'fondo-obra.jpg' por el nombre de tu imagen de fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fondo-obra.jpg');
+
+    /* Efecto Parallax: La imagen se queda fija al hacer scroll */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 100px 0;
+    /* Espaciado generoso */
+    color: white;
+    /* Todo el texto por defecto es blanco */
+}
+
+/* Grid para separar texto e imagen */
+.grid-destacado {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    /* Para que en móvil se ponga uno debajo de otro */
+}
+
+/* Columna de texto */
+.contenido-texto-blanco {
+    flex: 2;
+    /* Ocupa más espacio */
+    min-width: 300px;
+}
+
+.contenido-texto-blanco h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: white;
+    /* Aseguramos que el título sea blanco */
+}
+
+.contenido-texto-blanco p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    /* Un blanco ligeramente grisáceo para leer mejor */
+}
+
+.contenido-texto-blanco .contacto-directo {
+    font-weight: bold;
+    margin-top: 30px;
+    color: white;
+}
+
+/* Columna de la imagen derecha */
+.imagen-destacada-derecha {
+    flex: 1;
+    /* Ocupa menos espacio */
+    min-width: 300px;
+    text-align: center;
+}
+
+.imagen-destacada-derecha img {
+    width: 100%;
+    max-width: 450px;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Añadimos la transición suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.imagen-destacada-derecha img:hover {
+    transform: scale(1.05);
+    /* Al ampliar, aumentamos un poco la sombra para dar más sensación de elevación */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Botón Amarillo específico para esta sección */
+.btn-amarillo {
+    display: inline-block;
+    background-color: #fbc02d;
+    /* Amarillo intenso */
+    color: black !important;
+    /* Texto negro para contraste */
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn-amarillo:hover {
+    background-color: #f9a825;
+    /* Amarillo más oscuro al pasar el ratón */
+}
+
+/* Banner con fondo */
+.seccion-proyectos-fondo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('fondo-adoquines.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 0;
+    /* Ajusta esto a tu gusto para que el banner sea más o menos alto */
+    text-align: center;
+}
+
+/* El título dentro del banner necesita color blanco para contrastar */
+.seccion-proyectos-fondo h2 {
+    color: #ffffff !important;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Sección blanca del formulario */
+.contacto-seccion {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.contacto-contenedor {
+    max-width: 800px;
+    /* Ajusta el ancho según prefieras */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Reutilizamos tu botón amarillo de la sección anterior */
+.btn-amarillo {
+    display: inline-block;
+    background-color: #fbc02d;
+    color: black !important;
+    padding: 15px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-amarillo:hover {
+    background-color: #f9a825;
+}
+
+.grid-galeria {
+    display: grid;
+    /* Crea 3 columnas iguales */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* Espacio entre fotos */
+    margin-top: 40px;
+}
+
+.proyecto-item img {
+    width: 100%;
+    height: 300px;
+    /* Altura fija para todas las fotos */
+    object-fit: cover;
+    /* Recorta la imagen para que rellene el hueco sin deformarse */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el ratón */
+.proyecto-item img:hover {
+    transform: scale(1.05);
+    /* La foto crece un poquito */
+    cursor: pointer;
+}
+
+.grid-blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    background: rgb(206, 200, 200);
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-contenido {
+    padding: 20px;
+}
+
+.btn-leer-mas {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--naranja);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    /* Un gris claro suave */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #ddd;
+    /* Un poco más oscuro al pasar el ratón */
+}
+
+.hero-section {
+    padding: 100px 0;
+    background: #98e1f7;
+}
+
+.hero-inner {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.hero-imagen {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-imagen img {
+    width: 100%;
+    border: 8px solid rgb(8, 192, 248);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-imagen img:hover {
+    transform: scale(1.05);
+    /* Al ampliar, aumentamos un poco la sombra para dar más sensación de elevación */
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.6);
+}
+
+.contacto-seccion {
+    padding: 80px 0;
+}
+
+.contacto-texto {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0e0d0d;
+    font-size: 35px;
+}
+
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Aseguramos que los inputs y textarea ocupen todo el ancho del contenedor padre */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #0c0c0c;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* CRUCIAL: Esto evita que el padding se salga del ancho */
+    display: block;
+    /* Fuerza a que ocupen su propia línea */
+    margin-bottom: 15px;
+    /* Espacio entre cada campo */
+}
+
+/* Para asegurar que el contenedor del formulario no limite el ancho en pantallas pequeñas */
+.contacto-contenedor {
+    width: 90%;
+    /* Usa el 90% del ancho en móviles */
+    max-width: 800px;
+    /* Pero no te pases de 800px en pantallas grandes */
+    margin: 0 auto;
+    /* Centrado */
+}
+
+.btn-estilo-web {
+
+    cursor: pointer;
+}
+
+.contenedor-volver {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-seccion {
+    background-color: #121212;
+    /* Fondo oscuro */
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ff9900;
+    /* Color naranja de tus títulos */
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+
+.social-links a {
+    color: #ff9900;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Formulario del Boletín */
+.footer-form {
+    display: flex;
+}
+
+.footer-form input {
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.footer-form button {
+    background: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Pie de página final */
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-bottom .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom a {
+    color: #777;
+    text-decoration: none;
+}
+
+/* Selecciona los enlaces dentro de la lista del footer */
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    /* La magia: añade una transición suave */
+    transition: all 0.3s ease;
+    display: inline-block;
+    /* Necesario para que el movimiento funcione bien */
+}
+
+/* El efecto al poner el ratón encima */
+.footer-col ul li a:hover {
+    color: #ff9900;
+    /* Cambia al color naranja de tus títulos */
+    transform: translateX(10px);
+    /* Mueve el texto 10px a la derecha */
+    padding-left: 5px;
+    /* Añade un poco de espacio extra */
+}
+
+/* Estado inicial: color oro, quietos */
+.socialmedia__icon {
+    color: #ff9900;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.4s ease;
+    /* Transición suave para el movimiento */
+}
+
+/* Solo flota cuando pasas el ratón por encima */
+.socialmedia__icon:hover {
+    color: #ffffff;
+    /* Cambia a blanco al tocar */
+    transform: translateY(-8px);
+    /* Salta hacia arriba */
+}
+
+/* Esto le da aire a todos los iconos del footer para que no estén pegados al texto */
+.footer-col i {
+    margin-right: 10px;
+    /* Separa el icono del texto */
+    color: #ff9900;
+    /* Asegura que todos tengan el color oro */
+    width: 20px;
+    /* Asegura que todos tengan el mismo ancho y estén alineados */
+    text-align: center;
+}
+
+/* Elimina cualquier tipo de línea o guion que pueda aparecer alrededor o debajo */
+.social-links a {
+    text-decoration: none !important;
+    border: none !important;
+    background: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Asegura que los iconos no tengan absolutamente nada extra */
+.social-links a i {
+    text-decoration: none !important;
+    border: none !important;
+    display: inline-block;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+
+/* Asegura que el contenedor tenga la transición */
+.footer-col ul li {
+    transition: transform 0.3s ease;
+}
+
+/* Al pasar el ratón por el LI, se mueve el contenido (flecha + texto) */
+.footer-col ul li:hover {
+    transform: translateX(10px);
+}
+
+/* El estilo de la flecha que ya tenías */
+.footer-col ul li::before {
+    content: "› ";
+    color: #ff9900;
+    font-weight: bold;
+    margin-right: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo base (PC) */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    /* Tamaño máximo para que no se vea gigante */
+}
+
+.newsletter-form input {
+    padding: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.newsletter-form button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #e68a00;
+}
+
+/* Contenedor principal de la sección */
+.contenido-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.columna-izquierda,
+.columna-derecha {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Estilos de los elementos */
+.subtitulo {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--naranja);
+    font-weight: bold;
+}
+
+.columna-izquierda h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+}
+
+.columna-izquierda img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+    /* La transición necesaria para que el zoom sea suave */
+    transition: transform 0.3s ease;
+    /* Esto ayuda a que no se "desborde" si la imagen es grande */
+    display: block;
+}
+
+.columna-izquierda img:hover {
+    transform: scale(1.05);
+}
+
+/* Caja de años de experiencia */
+.caja-experiencia {
+    border: 4px solid var(--naranja);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    width: 150px;
+}
+
+.caja-experiencia h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.caja-experiencia:hover {
+    transform: scale(1.05);
+    /* Al ampliar, aumentamos un poco la sombra para dar más sensación de elevación */
+    box-shadow: 0 15px 40px rgba(14, 247, 255, 0.932);
+    background: rgb(201, 171, 240) !important;
+}
+
+/* Texto y lista */
+.frase-destacada {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.lista-ventajas {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0;
+    margin-top: 20px;
+}

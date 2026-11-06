@@ -1,0 +1,402 @@
+/* 1. Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --naranja: #ff6600;
+    --negro: #1a1a1a;
+    --gris: #f4f4f4;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Cabecera */
+.cabecera {
+    background: #e9ecef;
+    padding: 20px 0;
+    border-bottom: 4px solid var(--naranja);
+    position: relative;
+    z-index: 1000;
+}
+
+.cabecera .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--negro);
+    letter-spacing: -1px;
+}
+
+.logo h1 span {
+    color: var(--naranja);
+}
+
+.menu-principal>ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+    color: rgb(251, 255, 0);
+}
+
+.tiene-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--blanco);
+    width: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.tiene-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    padding: 8px 20px;
+    font-weight: 400;
+}
+
+.submenu a:hover {
+    color: var(--naranja);
+    background: #f9f9f9;
+}
+
+/* 3. Hero Section */
+.hero-construccion {
+    padding: 80px 0;
+    background: var(--gris);
+}
+
+.grid-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-texto h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--negro);
+}
+
+.hero-texto p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-principal {
+    background: var(--naranja);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-secundario {
+    border: 2px solid var(--negro);
+    color: var(--negro);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.imagen-mockup {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Responsive (Móvil) */
+.menu-movil-icono {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .grid-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-botones {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-movil-icono {
+        display: block;
+    }
+
+    .menu-principal {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #e9ecef;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .menu-principal.active {
+        display: block;
+    }
+
+    .menu-principal>ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        background: #fff;
+    }
+}
+
+/* Cuando la pantalla sea menor de 768px (móviles y tablets) */
+@media (max-width: 768px) {
+    .grid-hero {
+        /* Pasamos a 1 sola columna para que el contenido respire */
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        text-align: center;
+        /* Centramos el texto para que se vea mejor */
+    }
+
+    .hero-botones {
+        justify-content: center;
+        /* Centramos los botones */
+    }
+
+    .hero-texto h1 {
+        font-size: 2rem !important;
+        /* Reducimos un poco el título en móvil */
+    }
+}
+
+/* --- ADAPTACIÓN RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+    .top-bar-inner {
+        flex-direction: column;
+        /* En móvil, el logo arriba y la info abajo */
+        text-align: center;
+    }
+
+    .top-info {
+        flex-direction: row;
+        /* MANTIENE LA FILA HORIZONTAL EN MÓVIL */
+        justify-content: center;
+        flex-wrap: wrap;
+        /* Si el teléfono y email son muy largos, saltan de línea */
+        gap: 10px;
+        font-size: 13px;
+        /* Un poco más pequeño para que quepa todo */
+    }
+}
+
+/* Forzar que el menú en móvil siempre sea igual */
+@media (max-width: 768px) {
+    .menu-principal {
+        position: absolute;
+        top: 80px;
+        left: 0 !important;
+        /* Fuerza la izquierda */
+        right: 0 !important;
+        /* Fuerza la derecha */
+        margin: 0 !important;
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Fuerza a que cualquier grid de 2 o 3 columnas pase a 1 columna */
+    .grid-detalle,
+    .grid-servicios,
+    .grid-hero {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Ajusta los textos para que no se peguen a los bordes */
+    .contenedor {
+        padding: 0 15px !important;
+    }
+
+    /* Asegura que las imágenes no se desborden de la pantalla */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* --- Adaptación para Móviles --- */
+@media (max-width: 768px) {
+    .seccion-destacada-fondo {
+        background-attachment: scroll;
+        /* El parallax no funciona bien en muchos móviles, mejor quitarlo */
+        padding: 60px 0;
+    }
+
+    .contenido-texto-blanco h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid-destacado {
+        flex-direction: column-reverse;
+        /* En móvil, primero el texto y luego la imagen */
+    }
+}
+
+/* Adaptación a móviles (1 sola columna) */
+@media (max-width: 768px) {
+    .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Footer - Adaptación para móviles */
+@media (max-width: 768px) {
+
+    /* 1. Cambiamos la rejilla de 4 a 1 columna */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        /* Más espacio entre secciones al estar apiladas */
+        text-align: center;
+    }
+
+    /* 2. Centramos los elementos de lista */
+    .footer-col ul {
+        padding: 0;
+    }
+
+    /* 3. Centramos el formulario y lo adaptamos */
+    .footer-form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* 4. Centramos los iconos sociales */
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 5. Ajustamos el pie final (copyright y enlaces) */
+    .footer-bottom .contenedor {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Mantenemos el grid de 4 columnas pero ajustamos los espacios */
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* Sigue manteniendo las 4 columnas */
+        gap: 10px;
+        /* Reducimos el hueco para que quepa todo */
+    }
+
+    /* Reducimos el tamaño de la fuente para que no se desborde */
+    .footer-col h3 {
+        font-size: 0.85rem;
+    }
+
+    .footer-col ul li a,
+    .footer-col p {
+        font-size: 0.75rem;
+    }
+
+    /* Ajustamos los iconos para que no ocupen tanto */
+    .socialmedia__icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+        margin-right: 5px;
+    }
+
+    /* Ajustamos el formulario para que sea muy compacto */
+    .footer-form {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-form input,
+    .footer-form button {
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+}
+
+/* @media query para que sea RESPONSIVE */
+@media (max-width: 768px) {
+    .newsletter-form {
+        max-width: 100%;
+        /* En móvil, ocupa todo el ancho disponible */
+        gap: 8px;
+        /* Un poco menos de espacio */
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        padding: 10px;
+        /* Un poco más compacto en móvil */
+        font-size: 0.9rem;
+    }
+}
