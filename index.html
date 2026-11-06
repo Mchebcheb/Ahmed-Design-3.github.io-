@@ -397,6 +397,10 @@
             <div class="contacto-contenedor">
                 <p class="contacto-texto">Te asesoramos gratis y sin compromiso.</p>
                 <form action="https://formspree.io/f/xnjlzeap" method="POST">
+                    <!-- URL exacta de redirección para evitar el error 404 en el correo -->
+                    <input type="hidden" name="_next"
+                        value="https://mchebcheb.github.io/Ahmed-Design-3.github.io/index.html">
+
                     <div class="form-group">
                         <input type="text" name="nombre" placeholder="Tu Nombre" required>
                     </div>
@@ -408,11 +412,8 @@
                             required></textarea>
                     </div>
                     <button type="submit" class="btn-estilo-web">Enviar Mensaje</button>
-
-
+                </form>
             </div>
-            </form>
-        </div>
         </div>
     </section>
     <section id="seccion-mapa" class="mapa-full">
