@@ -719,13 +719,23 @@ body {
 .btn-volver {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #f0f0f0;
-    /* Un gris claro suave */
-    color: #333;
+    background-color: #ffcc00;
+    /* Amarillo vivo y brillante */
+    color: #333333;
+    /* Texto oscuro para que contraste bien */
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9rem;
+    font-weight: bold;
+    /* Un toque de negrita para que resalte más */
     transition: background 0.3s;
+}
+
+/* Efecto cuando pones el ratón encima */
+.btn-volver:hover {
+    background-color: #e6b800;
+    /* Amarillo un poco más tostado al pasar el ratón */
+    color: #000000;
 }
 
 .btn-volver:hover {
@@ -828,10 +838,7 @@ body {
     /* Centrado */
 }
 
-.btn-estilo-web {
 
-    cursor: pointer;
-}
 
 .contenedor-volver {
     margin-top: 20px;
